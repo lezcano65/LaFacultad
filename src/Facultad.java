@@ -28,9 +28,33 @@ public class Facultad implements Informacion{
         }else{System.out.println("No se encontro la carrera a eliminar");}
     }
 
+    public Facultad(String nombre, LinkedList<Carrera> coleccionCarrera) {
+        this.nombre = nombre;
+        this.coleccionCarrera = coleccionCarrera;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public LinkedList<Carrera> getColeccionCarrera() {
+        return coleccionCarrera;
+    }
+
+    public void setColeccionCarrera(LinkedList<Carrera> coleccionCarrera) {
+        this.coleccionCarrera = coleccionCarrera;
+    }
+
     @Override
     public String listarContenido() {
-        return null;
+        return "Facultad{" +
+                "nombre='" + nombre + '\'' +
+                ", coleccionCarrera=" + coleccionCarrera +
+                '}';
     }
 
     @Override

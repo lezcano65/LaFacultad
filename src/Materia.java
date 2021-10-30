@@ -61,7 +61,20 @@ public class Materia implements Informacion{
 
     @Override
     public String listarContenido() {
-        return null;
+        return "Materia{" +
+                "nombre='" + nombre + '\'' +
+                ", titular=" + titular +
+                ", coleccionEstudiantes=" + coleccionEstudiantes +
+                '}';
+    }
+
+    @Override
+    public String toString() {
+        return "Materia{" +
+                "nombre='" + nombre + '\'' +
+                ", titular=" + titular +
+                ", coleccionEstudiantes=" + coleccionEstudiantes +
+                '}';
     }
 
     @Override

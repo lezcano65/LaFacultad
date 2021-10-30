@@ -72,7 +72,10 @@ public class Carrera implements Informacion{
 
     @Override
     public String listarContenido() {
-        return null;
+        return "Carrera{" +
+                "nombre='" + nombre + '\'' +
+                ", coleccionMaterias=" + coleccionMaterias +
+                '}';
     }
 
     @Override
