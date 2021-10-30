@@ -1,6 +1,7 @@
 import java.util.LinkedList;
+import java.util.function.UnaryOperator;
 
-public class Materia implements Informacion{
+public class Materia extends LinkedList<Materia> implements Informacion{
 
     String nombre;
     Profesor titular;
@@ -80,5 +81,10 @@ public class Materia implements Informacion{
     @Override
     public int verCantidad() {
         return coleccionEstudiantes.size();
+    }
+
+    @Override
+    public void replaceAll(UnaryOperator<Materia> operator) {
+        super.replaceAll(operator);
     }
 }

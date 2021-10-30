@@ -47,6 +47,10 @@ public class Carrera implements Informacion{
         this.nombre = nombre;
         this.coleccionMaterias = new LinkedList<Materia>();
     }
+    public Carrera(String nombre,Materia mat ) {
+        this.nombre = nombre;
+        this.coleccionMaterias = mat;
+    }
 
     public String getNombre() {
         return nombre;
