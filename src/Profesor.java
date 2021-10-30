@@ -2,15 +2,14 @@ public class Profesor extends Persona{
     double basico;
     int antiguedad;
 
-<<<<<<< HEAD
-=======
-    public Profesor(String nombre, String Apellido, int legajo) {
+    public Profesor(String nombre, String Apellido, int legajo,double bas,int antig) {
         super.setNombre(nombre);
         super.setApellido(Apellido);
         super.setLegajo(legajo);
+        this.basico = bas;
+        this.antiguedad = antig;
     }
 
->>>>>>> c4b88d0 (Initial commit)
     public double getBasico() {
         return basico;
     }
@@ -26,12 +25,15 @@ public class Profesor extends Persona{
     public void setAntiguedad(int antiguedad) {
         this.antiguedad = antiguedad;
     }
-<<<<<<< HEAD
-=======
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Profesor{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", legajo=" + legajo +
+                ", sueldo basico=" + basico +
+                ", antiguedad=" + antiguedad +
+                '}';
     }
->>>>>>> c4b88d0 (Initial commit)
 }
