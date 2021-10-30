@@ -69,13 +69,14 @@ public class Carrera implements Informacion{
         this.coleccionMaterias = coleccionMaterias;
     }
 
+
     @Override
-    public void listarContenido() {
-        System.out.println("");
+    public String listarContenido() {
+        return null;
     }
 
     @Override
-    public void verCantidad() {
-        System.out.println("");
+    public int verCantidad() {
+        return coleccionMaterias.size();
     }
 }

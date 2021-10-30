@@ -1,4 +1,4 @@
 interface Informacion {
-    public void listarContenido();
-    public void verCantidad();
+    public String listarContenido();
+    public int verCantidad();
 }

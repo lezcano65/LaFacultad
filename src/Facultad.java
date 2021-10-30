@@ -1,5 +1,4 @@
 import java.util.LinkedList;
-import java.util.Scanner;
 
 public class Facultad implements Informacion{
 
@@ -30,12 +29,12 @@ public class Facultad implements Informacion{
     }
 
     @Override
-    public void listarContenido() {
-        System.out.println("");
+    public String listarContenido() {
+        return null;
     }
 
     @Override
-    public void verCantidad() {
-        System.out.println("");
+    public int verCantidad() {
+        return coleccionCarrera.size();
     }
 }

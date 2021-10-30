@@ -6,6 +6,24 @@ public class Materia implements Informacion{
     Profesor titular;
     LinkedList<Estudiante> coleccionEstudiantes;
 
+    public void agregarEstudiante (Estudiante nuevo){
+        this.coleccionEstudiantes.add(nuevo);
+    }
+
+    public void eliminarEstudiante(int legajo){
+        boolean bandera = false;
+        for(Estudiante estudiante: coleccionEstudiantes){
+            if(estudiante.getLegajo()==legajo){
+                coleccionEstudiantes.remove(estudiante);
+                bandera = true;
+            }
+        }
+        if (bandera){
+            System.out.println("El estudiante a sido borrado");
+        }else System.out.println("No se encontre el estudiante con legajo: "+legajo);
+
+    }
+
     public Materia(String nombre, Profesor titular) {
         this.nombre = nombre;
         this.titular = titular;
@@ -28,6 +46,10 @@ public class Materia implements Informacion{
         this.titular = titular;
     }
 
+    public void modificarTitular(Profesor titular) {
+        this.titular = titular;
+    }
+
     public LinkedList<Estudiante> getColeccionEstudiantes() {
         return coleccionEstudiantes;
     }
@@ -36,15 +58,14 @@ public class Materia implements Informacion{
         this.coleccionEstudiantes = coleccionEstudiantes;
     }
 
-    @Override
-    public void listarContenido() {
-        System.out.println("");
 
+    @Override
+    public String listarContenido() {
+        return null;
     }
 
     @Override
-    public void verCantidad() {
-        System.out.println("");
+    public int verCantidad() {
+        return coleccionEstudiantes.size();
     }
-
 }
